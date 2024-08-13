@@ -7,7 +7,7 @@
 - [x] `RE DO`: Add emjois to the sctions
 - [x] Post template
 - [ ] `WRITE`: A about page with more detail (add a table of contents on it.)
-- [ ] `GIT`: Upload this to git. 
+- [x] `GIT`: Upload this to git.  
 
 
 # BrainStorm:
