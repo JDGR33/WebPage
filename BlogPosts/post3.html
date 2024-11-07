@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title of Blog Post 1</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <!-- <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a> -->
+        </nav>
+    </header>
+
+    <section>
+        <article>
+            <h2>Building with AI #02 - Prompt Engineering in the API</h2>
+            <p>When using an LLM through an API, prompting looks a bit different than the chat interface you're used to. In the API, you’re working with three types of messages: user, assistant, and system.</p>
+            <ul>
+                <li>The user message is the one you’re familiar with—it’s what you type in the chat.</li>
+                <li>The assistant message is the LLM’s response.</li>
+                <li>The system prompt is key in API interactions. Unlike in the chat interface, this is where you set the groundwork for how you want the LLM to behave. You define its role, provide instructions, and set the tone for the conversation.</li>
+            </ul>
+            <p>When building solutions with LLMs, you'll spend more time refining the system prompt and adjusting the user message to get the right results.</p>
+            <P>Here are three top tips for crafting a solid system prompt:</P>
+            <ol>
+                <li>Define the role: Be explicit about the LLM’s function (e.g., “You are a technical writing assistant”).</li>
+                <li>Give examples: Show the LLM what the output should look like by providing examples.</li>
+                <li>Include relevant context: Providing the right background information is crucial, but it can be tricky to figure out what the model already knows. As a rule of thumb, don’t expect it to be aware of recent events.</li>
+            </ol>
+            <p>When refining a prompt, test and iterate quickly to see what works best before settling on a final version.</p>
+            <p>When working with complex inputs like tables of data, a great strategy is to reformat the data as lists or in JSON format before sending it to the LLM. If you have some knowledge of Python’s pandas library, you can easily transform an .XLSX file into a format that’s ready to send through the API.</p>
+            <p>When refining a prompt, test and iterate quickly to see what works best before settling on a final version.</p>
+            <p>If you want to dive deeper into prompt engineering, check out this course https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/.</p>
+            <p>The models may be outdated, but the techniques are still gold.</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Julio Guerrero. All rights reserved.</p>
+    </footer>
+</body>
+</html>

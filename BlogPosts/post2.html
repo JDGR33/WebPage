@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building with AI #1 - Using LLMs with an API</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <!-- <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a> -->
+        </nav>
+    </header>
+
+    <section>
+        <article>
+            <h2>Building with AI #1 - Using LLMs with an API</h2>
+            <p>An API (Application Programming Interface) is essentially the bridge that lets you use tools like ChatGPT in your own projects. Instead of using the chat interface, you can directly interact with the model through code. The first step is to create an API key in your OpenAI account. Think of this key as a special password that tells OpenAI who is making the request and who gets billed for it.</p>
+            <p>Be careful where you store your API key—leaking it can lead to unauthorized use, and you’d still be responsible for the charges.</p>
+            <p>One of the advantages of using the API is automation. You can make multiple requests at once or automate a series of requests. However, be mindful that the API has rate limits to prevent overloading the system, so if you're planning on making a lot of requests, you need to watch out for those limits.</p>
+            <p>Using a large language model (LLM) through the API is quite different from the web interface. There’s no built-in “chat” context, meaning each API call is a standalone event. If you’re trying to create a continuous conversation with the model, you’ll need to send the entire conversation history with each request. And if you hit the token limit for the model, you’ll need a strategy for handling that.</p>
+            <p>Another thing to consider is how you deal with different types of media. In the chat interface, you might be used to uploading files or generating nice-looking tables. When working with the API, you need to think about how to handle file data or how to format text outputs that are easy to process in your application. I’ll dive into this in future posts</p>
+            <p>Lastly, the API isn't just for generating text—it’s also your gateway to other OpenAI services like embeddings or batching requests. While this post focuses on OpenAI, many other AI companies offer their own APIs with different features.</p>
+            <p>This Quickstart Tutorial is great place to start playing with API of OpenAI https://platform.openai.com/docs/quickstart</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Julio Guerrero. All rights reserved.</p>
+    </footer>
+</body>
+</html>
