@@ -15,8 +15,9 @@ header {
 
 nav {
     display: flex;
+    background: #575757;
     justify-content: center;
-    margin: 10px 0;
+    margin: 0px 0;
 }
 
 nav a {
@@ -26,7 +27,7 @@ nav a {
 }
 
 nav a:hover {
-    background: #575757;
+    background: #686868;
 }
 
 section {
