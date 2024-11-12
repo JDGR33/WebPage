@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title of Blog Post 1</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="blogMain.html">Blogs</a>
+        </nav>
+    </header>
+
+    <section>
+        <article>
+            <!-- TITLE REPLACE -->
+            <h2>Building with AI #03 - Structured Responses with JSON Mode</h2>
+            <!-- CONTENT REPLACE--> 
+            <p>When working with Large Language Models (LLMs) like OpenAI's GPT-4, you can guide the model to provide structured, easily parsed outputs using JSON mode. This approach is especially useful for tasks like data classification, or sentiment analysis, where responses need to be machine-readable to create tables of summary statistics.</p>
+            <p><b>Getting Started with JSON Mode</b></p>
+            <p>JSON mode allows you to specify that you want a response in JSON format by setting a schema in the API request. This schema acts as a guide, defining the expected structure for fields and data types.</p>
+            <p><b>Few-Shot Prompting with JSON Mode</b></p>
+            <p>Including a few examples in your prompt helps the model better understand the desired structure, boosting the reliability of JSON responses.</p>
+            <p><b>Schema Validation</b></p>
+            <p>JSON schemas help ensure the model's output is consistent. Libraries like Pydantic in Python simplify schema creation and validation, allowing you to catch and handle any mismatches in response format.</p>
+            <p>Links:</p>
+            <ul>
+                <li><a href="https://platform.openai.com/docs/guides/structured-outputs#json-mode"> JSON Mode Documentation </a> </li>
+                <li><a href="https://docs.pydantic.dev/latest/"> Pydantic Documentation </a></li>
+            </ul>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Julio Guerrero. All rights reserved.</p>
+    </footer>
+</body>
+</html>
