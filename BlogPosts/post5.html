@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title of Blog Post 1</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="blogMain.html">Blogs</a>
+        </nav>
+    </header>
+
+    <section>
+        <article>
+
+            <h2>🤖Building with AI #04 - Dynamic Function Calling with LLMs ⚒️</h2>
+            
+            <p>Function calling in OpenAI's API allows the LLM to act as a coordinator, intelligently deciding when to call predefined functions in your code based on user input. This is a vital part of building an agent with LLMs, enabling them to perform specific actions or retrieve data autonomously in response to user queries.</p>
+            <p><b>🤔How Function Calling Works</b></p>
+            <p>With function calling, you define and set up specific functions within the LLM’s environment. Each function should include a detailed description outlining what the function does and the conditions under which it should be called. This guidance helps the model interpret user intent and know exactly when to trigger a particular function.</p>
+            <p><b>✍️Creating a Function Description</b></p>
+            <p>Writing clear descriptions for each function is essential. The model relies on this information to understand how each function can serve a user request.</p>
+            <p><b>🖥️Schema Definition</b></p>
+            <p>The schema acts as a blueprint for data exchange, specifying field types, data formats, and any required parameters. This structure helps ensure that the model can interact accurately with each function.</p>
+            <p><b>⚠️Error Handling and Validation</b></p>
+            <p>As with structured JSON responses, validating function output is essential. If the response doesn’t match the schema or if the function fails, implementing error handling—such as logging errors or retrying—keeps the interaction flow smooth and reliable.</p>
+            <ul>
+                <li><a href="https://platform.openai.com/docs/guides/function-calling">Function Calling Documentation </a></li>
+                <li><a href="https://json-schema.org/learn">JSON Schema Documentation</a></li>
+            </ul>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Julio Guerrero. All rights reserved.</p>
+    </footer>
+</body>
+</html>
