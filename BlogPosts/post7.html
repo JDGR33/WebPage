@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title of Blog Post 1</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="blogMain.html">Blogs</a>
+        </nav>
+    </header>
+
+    <section>
+        <article>
+            <!-- TITLE REPLACE -->
+            <h2>🤖 Building with AI #06 - What Are Embeddings? ⚒️</h2>
+            <!-- CONTENT REPLACE--> 
+            <p>In my next article, we’ll dive into Retrieval-Augmented Generation (RAG) systems—one of the most powerful tools for building AI applications. But to truly understand RAG, you first need a solid grasp of embeddings, a fundamental concept that underpins how RAG and many other AI tools work</p>
+            <h3🔢 What Is an Embedding?</h3>
+        <p>An embedding is simply a way to represent data—usually text—as a list of numbers, known as a vector. This vector captures the essence or meaning of the text, whether it’s a single word, a sentence, a paragraph, or even an entire document.</p>
+        <p>Each number in the vector corresponds to a certain feature of the text. For example, one number might represent how closely the text resembles a question. However, in practice, embeddings are typically high-dimensional, and we can’t directly interpret what each individual number represents.
+        </p>
+        <h3>🤔 Why Are Embeddings Useful?</h3>
+        <p>Embeddings enable computers to measure the similarity in meaning between pieces of text. For instance, humans intuitively know that "king" is more similar to "princess" than to "dog." Embeddings approximate this capability for machines.</p>
+        <p>Here are the key benefits of embeddings:</p>
+        <ul>
+          <li>Semantic Similarity: Embeddings allow us to find related content based on meaning, not just exact keyword matches.</li>
+          <li>Enhanced Search: By using embeddings, search systems can retrieve relevant information from vast knowledge bases more effectively than traditional keyword-based methods.</li>
+        </ul>
+        <p>This capability is crucial for AI systems dealing with tasks like document retrieval, question answering, or any application requiring nuanced text understanding.</p>
+        <h3>🛠️ How Do Embeddings Work?</h3>
+        <p>The process of using embeddings typically follows these steps:</p>
+        <ol>
+          <li>Generate Embeddings: Use a model (e.g., OpenAI’s embedding model or an open-source alternative) to create a vector for each piece of text in your dataset</li>
+          <li>Query Embedding: Convert your user’s query (like a question or keyword) into an embedding using the same model.</li>
+          <li>Similarity Search: Use a mathematical distance metric, such as dot product or cosine similarity, to compare the query embedding with the dataset embeddings and find the most relevant matches.</li>
+        </ol>
+        <p>Different embedding models may perform better with specific tasks or datasets, so it’s worth exploring the recommendations from your model provider.</p>
+        <h3>🌟 In Summary</h3>
+        <p>Embeddings are the backbone of many modern AI applications. They give machines the ability to interpret and compare the meaning of text, paving the way for advanced tools like RAG systems. Understanding how embeddings work will prepare you to build smarter, more effective AI solutions.</p>
+        <ul>
+          <li>Embeddings https://weaviate.io/blog/vector-embeddings-explained</li>
+          <li>Distance metrics: https://weaviate.io/blog/distance-metrics-in-vector-search</li>
+          <li>OpenAI’s documentation: https://platform.openai.com/docs/guides/embeddings</li>
+        </ul>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Julio Guerrero. All rights reserved.</p>
+    </footer>
+</body>
+</html>
