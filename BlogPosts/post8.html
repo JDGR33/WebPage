@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title of Blog Post 1</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="blogMain.html">Blogs</a>
+        </nav>
+    </header>
+
+    <section>
+        <article>
+            <h2>🤖 Building with AI #07 - RAG systems ⚒️</h2>
+            <p>RAG (Retrieval-Augmented Generation) systems make AI applications much smarter by providing relevant, specific context to a Large Language Model (LLM). Imagine a RAG system as an LLM with access to your own personal repository of information, enabling it to solve targeted problems more effectively.</p>
+            <h3>🛠️ How Does It Work?</h3>
+            <p>A simple RAG system operates in three steps:</p>
+            <p>Embed the User Input: Convert the user’s input (e.g., a question) into a vector using the same embedding model used to create the knowledge base.</p>
+            <ul>
+                <li>Retrieve Relevant Information: Use this vector as a query to retrieve the most relevant pieces of information from a Vector Database.</li>
+                <Li>Generate a Response: Provide the original user input along with the retrieved information to the LLM for a tailored response.</Li>
+            </ul>    
+            <p>With frameworks like LangChain, you can build a basic RAG system in just a few lines of code.</p>
+            <h3>📚 Use Cases</h3>
+            <p>RAG systems are invaluable for tasks where the LLM needs access to specific knowledge not included in its training. For example:</p>
+            <ul>
+                <li>An onboarding chatbot for a company could use manuals and presentations as its knowledge base to provide precise answers and direct users to relevant sections of the materials. </li>
+                <li>A customer support assistant could reference up-to-date product documentation to answer user queries effectively.</li>
+            </ul>
+            <h3>🔧 Advanced Implementations</h3>
+            <p>While the basic RAG workflow is simple, there are numerous ways to enhance its performance:</p>
+            <ul>
+                <li>Query Refinement: Use an LLM to rewrite the user input, improving the quality of the query before searching the Vector Database.</li>
+                <li>Iterative Retrieval: If the initial results don’t fully address the query, use an LLM to refine and retry the search.</li>
+                <li>Chunking Strategies: Large documents need to be split into smaller, manageable pieces to fit the embedding model's input size. Strategies for chunking include defining chunk size, adding context to each chunk, and enriching chunks with metadata for better retrieval.</li>
+            </ul>
+            <h3>🌟 Why Start Simple?</h3>
+            <p>RAG systems are a versatile and rapidly evolving tool in the AI landscape. However, it’s essential to start with a basic implementation before exploring complex enhancements. As the saying goes, “Why build a neural network when a linear model does the trick?”</p>
+            <p>With RAG systems, you can empower your LLM to go beyond its training, making it a highly customizable and intelligent solution for real-world problems.</p>
+            <p>Links </p>
+            <p>Building a RAG with LangChain: https://python.langchain.com/docs/tutorials/rag/</p>
+
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Julio Guerrero. All rights reserved.</p>
+    </footer>
+</body>
+</html>
