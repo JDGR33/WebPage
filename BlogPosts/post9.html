@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="blogMain.html">Blogs</a>
+        </nav>
+    </header>
+
+    <section>
+        <article>
+
+            <h2>🤖 Building with AI #08 - Multimodality ⚒️</h2>
+            <p>Modern LLMs (Large Language Models) aren’t limited to just text—they can also "see" images, thanks to
+                multimodality. This capability allows models like OpenAI’s GPT-4 (Vision) to process images alongside
+                text, opening up a world of possibilities, especially when combined with RAG systems.</p>
+            <h3>🛠️ How Does IIt Work?</h3>
+            <p>Take OpenAI’s GPT-4 Vision as an example. Implementing multimodality is straightforward:</p>
+            <ol>
+                <li><strong>Write a Prompt:</strong> Define the task you want the model to perform, such as extracting
+                    insights from an image or analyzing a chart.</li>
+                <li><strong>Send the Request:</strong> Use the API to send your prompt along with the image. Local
+                    images can be encoded in base64 for upload.
+                    For detailed instructions, OpenAI’s documentation provides a step-by-step guide to setting up Vision
+                    capabilities.</li>
+            </ol>
+            <h3>📚 Use Cases</h3>
+            <p>Traditional extraction or scraping techniques work well when all information is text-based. However, many
+                tasks rely on visuals to convey key insights. Multimodal capabilities let you handle these cases
+                efficiently:</p>
+            <ul>
+                <li><strong>Extracting Data from Visual Reports:</strong> Analyze PowerPoint presentations, reports with
+                    charts, or image-heavy documents to retrieve meaningful data.</li>
+                <li><strong>Image Classification:</strong> Categorize or tag images based on content, enhancing
+                    workflows like social media analysis.</li>
+                <li><strong>Enriching RAG Systems:</strong> Process images with an LLM, convert the extracted text into
+                    usable insights, and store it in your RAG system for future queries.</li>
+            </ul>
+            <h3>🔧 Things to Keep in Mind</h3>
+            <p>While multimodality is powerful, it comes with limitations:</p>
+            <ul>
+                <li><strong>Cost:</strong> Processing images with LLMs can be expensive. For tasks involving large
+                    volumes of images, traditional image classification models might be more cost-effective.</li>
+                <li><strong>Image Resolution:</strong> Test the resolution that works best for your task, as higher
+                    resolutions can increase costs.</li>
+                <li><strong>Complexity vs. Volume:</strong> Multimodal models shine when tasks are complex (e.g.,
+                    summarizing a dashboard image) or vary frequently. For repetitive tasks with high volumes, other ML
+                    solutions may be more practical.</li>
+            </ul>
+            <h3>🌟 Conclusion</h3>
+            <p>When used thoughtfully, multimodality is a game-changer for building AI solutions. In a world filled with
+                charts, diagrams, and visual data, giving AI the ability to "see" creates powerful optimization
+                opportunities for businesses. Paired with RAG systems, this capability can unlock new ways to handle and
+                leverage information.</p>
+            <p>Links:</p>
+            <p>OpenAI Documentation on Vison: https://platform.openai.com/docs/guides/vision?lang=node</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Julio Guerrero. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
