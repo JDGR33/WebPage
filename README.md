@@ -11,6 +11,7 @@
 - [x] `ADD`: A way to go back to the main page and the BlogPosts
 - [ ] `ADD`: Give it more life
 - [ ] `WRITE`: A about page with more detail (add a table of contents on it.)
+- [ ] `ADD`: Add a script to add new post
 
 Link to the local page: ["\\wsl.localhost\Ubuntu\home\julio\WebPage\index.html"](file://wsl.localhost/Ubuntu/home/julio/WebPage/index.html)
 
