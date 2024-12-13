@@ -9,7 +9,7 @@ def add_post_to_index(post_name: str, post_title: str, description="") -> None:
     location_placeholder = "<!--ADD -->"
     text_to_add = f"""
             <article>
-                <h3><a href="{post_name}">{post_title}</a></h3>
+                <h3><a href="/BlogPosts/{post_name}">{post_title}</a></h3>
                 <p>{description}</p>
             </article>
             {location_placeholder}
