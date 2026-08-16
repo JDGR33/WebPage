@@ -2,7 +2,7 @@
 
 People who write code at their job often forget that they don’t get paid to do that: they got hired to solve problems. The Data Analyst’s main goal is to uncover trends. The Software Engineer gets asked to add a new feature to a SaaS. Outputting lines of code is not a metric of success in any industry; that is why reducing the time we spend in the act of writing each line is crucial to keep our energy and focus on tasks that truly matter. That is where learning Vim Motions gets handy in making us more productive. 
 
-For the uninitiated, Vim is a text editor with a very convenient set of “HotKeys” for moving, editing and reviewing code. It’s likely that you have seen some Tech influencer or Reddit post writing code in a cool looking custom text editor in their terminal, it’s most likely that they are using NeoVim (the newer incarnation of the original Vim editor). Now, let me be clear, I am is not going to tell you whether you need to use NeoVim/Vim as a text editor, my mission is to show the main benefits of Vim Motions.
+For the uninitiated, Vim is a text editor with a very convenient set of hotkeys for moving, editing and reviewing code. It’s likely that you have seen some Tech influencer or Reddit post writing code in a cool looking custom text editor in their terminal, it’s most likely that they are using NeoVim (the newer incarnation of the original Vim editor). Now, let me be clear, I am not going to tell you whether you need to use NeoVim/Vim as a text editor, my mission is to show the main benefits of Vim Motions.
 
 Vim helps us save time writing code by doing each action a little faster. By reducing a couple of seconds every time we need to search a string, highlighting lines or moving to the end of the function we can compound those gains and skim away the overall time we take building great solutions. 
 
@@ -12,17 +12,17 @@ Furthermore, clicking can cause health issues when you spend hours on the comput
 
 Additionally, learning Vim Motions makes it easier to use Vim. This becomes handy when I am in the terminal of a computer like a homeserver, a Virtual Machine or a remote server. It's very convenient to use the Vim command when dealing with config files or doing minor changes to a couple of lines of code on those machines. 
 
-Ok, let’s address the elephant in the room: using Vim Motions has a learning curve. You will need to understand things like Insert Mode, Visual Mode, and some others. But, to be honest, you don’t really need to memorize that many motions to gain significant efficiency gains and become comfortable moving around. Once you get into the habit of using the basic commands, you will ask yourself “How could I do this or that with Vim Motions”. 
+Okay, let’s address the elephant in the room: using Vim Motions has a learning curve. You will need to understand things like Insert Mode, Visual Mode, and some others. But, to be honest, you don’t really need to memorize that many motions to gain significant efficiency gains and become comfortable moving around. Once you get into the habit of using the basic commands, you will ask yourself “How could I do this or that with Vim Motions”. 
 
 I will agree that not everyone should learn Vim. If you only casually write code once every two weeks or you are just starting out, it’s very likely that your time will be spent doing something else. But, if you work with code daily or feel like the clicking is getting in the way, I would recommend you take a step into Vim.
 
-Some might say: “That’s all great and all, but what about AI? No one is going to write code in a couple of years”. Without getting too much into the debate of the quality of code and capabilities of current AI Coding Agents, the reality is that people still have and need to write code the “old fashion way”. In my experience when AI fails to fix the problem, it is very useful to have the ability to move quickly through the code and solve it yourself. 
+Some might say: “That’s all great and all, but what about AI? No one is going to write code in a couple of years”. Without getting too much into the debate of the quality of code and capabilities of current AI Coding Agents, the reality is that people still have and need to write code the “old-fashioned way”. In my experience when AI fails to fix the problem, it is very useful to have the ability to move quickly through the code and solve it yourself. 
 
-Additionally, Vim Motions paired with AI is a great combo when dealing with Complex Code.
+Additionally, Vim Motions paired with AI is a great combo when dealing with complex code.
 
-Even if AI can write most of the code, it’s likely that you need to review it and make small fixes to it. Vim Motions make it easier to jump between sections of your code and solve the problems AI couldn’t Jproperly solve.
+Even if AI can write most of the code, it’s likely that you need to review it and make small fixes to it. Vim Motions make it easier to jump between sections of your code and solve the problems AI couldn’t properly solve.
 
-If you are interested in using Vim Motions, or at least tying them out, you don’t need to install NeoVim. There are great resources on YouTube on how to install the Vim extension and how to set up in VS Code. The great thing about using this extension is that if you are in a hurry while learning the motions, you can always turn it off and go back to the default version. 
+If you are interested in using Vim Motions, or at least trying them out, you don’t need to install NeoVim. There are great resources on YouTube on how to install the Vim extension and how to set up in VS Code. The great thing about using this extension is that if you are in a hurry while learning the motions, you can always turn it off and go back to the default version. 
 
 Honestly, I really like using it and it’s hard for me to go back. Now, I complain when working with text editors that lack support for it. At the end of the day, Vim Motions can be seen as a productivity tool, if you try it and don’t see results then it is not a good tool for you. But I am of the opinion that trying new things is fun. So, try it for a couple of weeks and see if you like it, maybe you will find yourself recommending it to others. 
 

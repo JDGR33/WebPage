@@ -8,6 +8,8 @@ import markdown
 
 PLACEHOLDER = "<!--ADD -->"
 TEMPLATE_PLACEHOLDER = "{ post_content }"
+POST_TITLE_PLACEHOLDER = "{ post_title }"
+META_DESCRIPTION_PLACEHOLDER = "{ meta_description }"
 
 
 def parse_front_matter(source_text: str) -> tuple[dict[str, str], str]:
@@ -46,6 +48,17 @@ def extract_description(markdown_text: str) -> str:
             continue
         return stripped
     return ""
+
+
+def normalize_meta_description(text: str, max_length: int = 160) -> str:
+    cleaned = re.sub(r"\s+", " ", text).strip()
+    if len(cleaned) <= max_length:
+        return cleaned
+
+    cutoff = cleaned[: max_length - 1].rstrip()
+    if " " in cutoff:
+        cutoff = cutoff.rsplit(" ", 1)[0]
+    return f"{cutoff}…"
 
 
 def build_article_entry(
@@ -168,7 +181,27 @@ def main() -> None:
             f"Template placeholder '{TEMPLATE_PLACEHOLDER}' not found in {template_path}"
         )
 
+    if POST_TITLE_PLACEHOLDER not in template_text:
+        raise ValueError(
+            f"Template placeholder '{POST_TITLE_PLACEHOLDER}' not found in {template_path}"
+        )
+
+    if META_DESCRIPTION_PLACEHOLDER not in template_text:
+        raise ValueError(
+            f"Template placeholder '{META_DESCRIPTION_PLACEHOLDER}' not found in {template_path}"
+        )
+
+    raw_meta_description = description or (
+        "Article by Julio Guerrero about AI, data, software, and practical engineering workflows."
+    )
+    meta_description = normalize_meta_description(raw_meta_description)
+
     output_text = template_text.replace(TEMPLATE_PLACEHOLDER, post_html)
+    output_text = output_text.replace(POST_TITLE_PLACEHOLDER, html.escape(title))
+    output_text = output_text.replace(
+        META_DESCRIPTION_PLACEHOLDER,
+        html.escape(meta_description),
+    )
     output_path = input_path.with_suffix(".html")
     output_path.write_text(output_text, encoding="utf-8", errors="xmlcharrefreplace")
 
