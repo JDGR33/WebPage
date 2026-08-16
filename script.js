@@ -1,26 +1,44 @@
 document.addEventListener("DOMContentLoaded", async function () {
-    const postsPageUrl = "BlogPosts/blogMain.html"; // Correct path to the blog posts page
+    const postsPageUrl = "BlogPosts/blogMain.html";
+    const container = document.querySelector(".blog-posts");
+
+    if (!container) {
+        return;
+    }
 
     try {
-        // Fetch the blogMain.html file
         const response = await fetch(postsPageUrl);
-        const text = await response.text();
+        if (!response.ok) {
+            throw new Error(`Request failed with status ${response.status}`);
+        }
 
-        // Parse the HTML from the response
+        const text = await response.text();
         const parser = new DOMParser();
         const doc = parser.parseFromString(text, "text/html");
-
-        // Select all blog posts
         const allPosts = Array.from(doc.querySelectorAll(".blog-posts article"));
 
-        // Shuffle the posts and pick three
+        if (allPosts.length === 0) {
+            throw new Error("No blog posts found in blogMain.html");
+        }
+
         const randomPosts = allPosts.sort(() => Math.random() - 0.5).slice(0, 3);
 
-        // Add the random posts to the main page
-        const container = document.querySelector(".blog-posts");
-        container.innerHTML = ''; // Clear existing content
+        container.innerHTML = "";
+        randomPosts.forEach((post) => {
+            const postClone = post.cloneNode(true);
 
-        randomPosts.forEach(post => container.appendChild(post));
+            // Keep links working when content is copied from BlogPosts/blogMain.html to index.html.
+            postClone.querySelectorAll("a[href]").forEach((anchor) => {
+                const href = anchor.getAttribute("href") || "";
+                const isExternal = /^(?:[a-z]+:|\/\/|#)/i.test(href);
+
+                if (!isExternal && !href.startsWith("BlogPosts/")) {
+                    anchor.setAttribute("href", `BlogPosts/${href.replace(/^\.\//, "")}`);
+                }
+            });
+
+            container.appendChild(postClone);
+        });
     } catch (error) {
         console.error("Error fetching blog posts:", error);
     }

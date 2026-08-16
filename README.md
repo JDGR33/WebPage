@@ -13,6 +13,19 @@
 - [ ] `WRITE`: A about page with more detail (add a table of contents on it.)
 - [ ] `ADD`: Add a script to add new post
 
+## Run Locally
+
+Use a local server so JavaScript `fetch` works reliably:
+
+```bash
+cd /home/julio/WebPage
+python3 -m http.server 8000
+```
+
+Then open:
+
+http://localhost:8000/
+
 Link to the local page: ["\\wsl.localhost\Ubuntu\home\julio\WebPage\index.html"](file://wsl.localhost/Ubuntu/home/julio/WebPage/index.html)
 
 # BrainStorm:
