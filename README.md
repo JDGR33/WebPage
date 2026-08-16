@@ -26,6 +26,44 @@ Then open:
 
 http://localhost:8000/
 
+## Generate New Blog Posts
+
+Install dependencies:
+
+```bash
+cd /home/julio/WebPage
+python3 -m pip install -r requirements.txt
+```
+
+Convert a markdown post into HTML and add it to the blog index:
+
+```bash
+python3 utils.py BlogPosts/post13.md
+```
+
+Optional metadata at the top of the markdown file:
+
+```md
+---
+title: My Post Title
+description: One line summary for blogMain.html
+date: 2026-08-16
+tags: AI, Python
+---
+
+## My Post Title
+```
+
+Useful flags:
+
+```bash
+# Override metadata from CLI
+python3 utils.py BlogPosts/post13.md --title "Custom Title" --description "Short summary"
+
+# Generate HTML but do not update blogMain.html
+python3 utils.py BlogPosts/post13.md --no-index
+```
+
 Link to the local page: ["\\wsl.localhost\Ubuntu\home\julio\WebPage\index.html"](file://wsl.localhost/Ubuntu/home/julio/WebPage/index.html)
 
 # BrainStorm:
