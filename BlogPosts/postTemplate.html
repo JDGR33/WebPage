@@ -11,22 +11,31 @@
 
 <body>
     <header>
-        <h1>My Blog</h1>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="blogMain.html">Blogs</a>
-        </nav>
+        <div class="header-inner">
+            <h1><a href="../index.html">Julio Guerrero</a></h1>
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="blogMain.html">All Posts</a>
+                <a href="../index.html#contact">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <section>
-        <article>
-            { post_content }
-        </article>
-    </section>
+    <main>
+        <section>
+            <article>
+                { post_content }
+                <div class="post-nav-footer">
+                    <a class="back-to-blogs" href="blogMain.html">&larr; Back to all posts</a>
+                </div>
+            </article>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 Julio Guerrero. All rights reserved.</p>
+        <p>&copy; 2026 Julio Guerrero. All rights reserved.</p>
     </footer>
+    <script src="../script.js"></script>
 </body>
 
 </html>

@@ -12,84 +12,91 @@
 
 <body>
     <header>
-        <h1>My Blog</h1>
-        <nav>
-            <a href="../index.html">Home</a>
-            <!-- <a href="about.html">About</a>
-            <a href="contact.html">Contact</a> -->
-        </nav>
+        <div class="header-inner">
+            <h1><a href="../index.html">Julio Guerrero</a></h1>
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="blogMain.html" class="active">Blog</a>
+                <a href="../index.html#contact">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <section>
-        <h2>Blog Posts</h2>
-        <div class="blog-posts">
-            <article>
-                <h3><a href="post1.html">Building with AI #0 – Series of Short Posts</a></h3>
-                <p>The first post of my series "Building with AI".</p>
-            </article>
-            <article>
-                <h3><a href="post2.html">Building with AI #1 - Using LLMs with an API</a></h3>
-                <p>An intro to using LLMs with an API.</p>
-            </article>
-            <article>
-                <h3><a href="post3.html">Building with AI #02 - Prompt Engineering in the API</a></h3>
-                <p>How to build good prompts when using LLMs by the API.</p>
-            </article>
-            <article>
-                <h3><a href="post4.html">Building with AI #03 - Structured Responses with JSON Mode</a></h3>
-                <p>When to use JSON mode.</p>
-            </article>
-            <article>
-                <h3><a href="post5.html">🤖Building with AI #04 - Dynamic Function Calling with LLMs ⚒️</a>
-                </h3>
-                <p>When to use function calling.</p>
-            </article>
-            <article>
-                <h3><a href="post6.html">🤖 Building with AI #05 - Introduction to LLM Frameworks ⚒️</a></h3>
-                <p>How LLM frameworks make your life easier.</p>
-            </article>
-            <article>
-                <h3><a href="post7.html">🤖 Building with AI #06 - What Are Embeddings? ⚒️</a></h3>
-                <p>Understanding what embeddings are and how they are useful when building AI
-                    applications.</p>
-            </article>
-            <article>
-                <h3><a href="post8.html">🤖 Building with AI #07 - RAG systems ⚒️</a></h3>
-                <p>Understanding the great power of RAG.</p>
-            </article>
-            <article>
-                <h3><a href="post9.html">🤖 Building with AI #08 - Multimodality ⚒️</a></h3>
-                <p>Use the power of vision.</p>
-            </article>
+    <main>
+        <section>
+            <div class="section-header">
+                <h2>📝 All Blog Posts</h2>
+                <span id="post-count" class="post-count"></span>
+            </div>
 
-            <article>
-                <h3><a href="post10.html">🤖 Building with AI #09 - Agents ⚒️</a></h3>
-                <p>The power of LLM agents.</p>
-            </article>
-            <article>
-                <h3><a href="post11.html">🤖 Building with AI #10 - Beware of AI Hype ⚒️</a></h3>
-                <p>Don't get swept up in the AI glitter storm – the reality might be less sparkly than you think.</p>
-            </article>
+            <div class="blog-controls">
+                <input type="search" id="blog-search" class="search-input" placeholder="Search articles by title or topic..." aria-label="Search blog posts">
+            </div>
 
+            <div class="blog-posts">
+                <article>
+                    <h3><a href="post1.html">Building with AI #0 – Series of Short Posts</a></h3>
+                    <p>The first post of my series "Building with AI".</p>
+                </article>
+                <article>
+                    <h3><a href="post2.html">Building with AI #1 - Using LLMs with an API</a></h3>
+                    <p>An intro to using LLMs with an API.</p>
+                </article>
+                <article>
+                    <h3><a href="post3.html">Building with AI #02 - Prompt Engineering in the API</a></h3>
+                    <p>How to build good prompts when using LLMs by the API.</p>
+                </article>
+                <article>
+                    <h3><a href="post4.html">Building with AI #03 - Structured Responses with JSON Mode</a></h3>
+                    <p>When to use JSON mode.</p>
+                </article>
+                <article>
+                    <h3><a href="post5.html">🤖 Building with AI #04 - Dynamic Function Calling with LLMs ⚒️</a></h3>
+                    <p>When to use function calling.</p>
+                </article>
+                <article>
+                    <h3><a href="post6.html">🤖 Building with AI #05 - Introduction to LLM Frameworks ⚒️</a></h3>
+                    <p>How LLM frameworks make your life easier.</p>
+                </article>
+                <article>
+                    <h3><a href="post7.html">🤖 Building with AI #06 - What Are Embeddings? ⚒️</a></h3>
+                    <p>Understanding what embeddings are and how they are useful when building AI applications.</p>
+                </article>
+                <article>
+                    <h3><a href="post8.html">🤖 Building with AI #07 - RAG systems ⚒️</a></h3>
+                    <p>Understanding the great power of RAG.</p>
+                </article>
+                <article>
+                    <h3><a href="post9.html">🤖 Building with AI #08 - Multimodality ⚒️</a></h3>
+                    <p>Use the power of vision.</p>
+                </article>
+                <article>
+                    <h3><a href="post10.html">🤖 Building with AI #09 - Agents ⚒️</a></h3>
+                    <p>The power of LLM agents.</p>
+                </article>
+                <article>
+                    <h3><a href="post11.html">🤖 Building with AI #10 - Beware of AI Hype ⚒️</a></h3>
+                    <p>Don't get swept up in the AI glitter storm – the reality might be less sparkly than you think.</p>
+                </article>
+                <article>
+                    <h3><a href="post12.html">🖥️ Using Vim Motions</a></h3>
+                    <p>Why reducing the time spent writing each line of code matters, and how Vim motions boost daily productivity.</p>
+                </article>
+                <article>
+                    <h3><a href="post13.html">Bash, APIs, and Scripts in the AI World</a></h3>
+                    <p>Most people nowadays use tools like Claude Cowork or other AI agentic systems to manage their work. Even individuals with deep technical knowledge rarely consider how these tools operate under the hood—they simply prompt the AI for a solution and move on. While abstracting these complexities is convenient, understanding the underlying tools that AI agents utilize remains essential.</p>
+                </article>
+                <!--ADD -->
 
-            <article>
-                <h3><a href="post12.html">🖥️ Using Vim Motions</a></h3>
-                <p></p>
-            </article>
-            
-            <article>
-                <h3><a href="post13.html">Bash, APIs, and Scripts in the AI World</a></h3>
-                <p>Most people nowadays use tools like Claude Cowork or other AI agentic systems to manage their work. Even individuals with deep technical knowledge rarely consider how these tools operate under the hood—they simply prompt the AI for a solution and move on. While abstracting these complexities is convenient, understanding the underlying tools that AI agents utilize remains essential.</p>
-            </article>
-            <!--ADD -->
+            </div>
 
-        </div>
-
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 My Blog. All rights reserved.</p>
+        <p>&copy; 2026 Julio Guerrero. All rights reserved.</p>
     </footer>
+    <script src="../script.js"></script>
 </body>
 
 </html>

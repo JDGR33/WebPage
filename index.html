@@ -4,53 +4,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Julio Guerrero | Data, AI, and Tech Notes</title>
+    <title>Julio Guerrero | Data Engineer, AI &amp; Cloud Architecture</title>
     <meta name="description"
-        content="Personal site of Julio Guerrero with articles on AI, data science, software, and practical lessons from building tech projects.">
+        content="Personal site and portfolio of Julio Guerrero — Data Analyst and Engineer specializing in AWS serverless data pipelines, Terraform, RAG systems, and AI solutions.">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-        <h1>Julio's Webpage</h1>
-    </header>
-    <nav>
-        <a href="#about-me">About Me</a>
-        <a href="#contact">Contact</a>
-        <a href="#blog-posts">Blog Posts</a>
-    </nav>
-    <section id="about-me">
-        <h2>👀 About Me</h2>
-        <p>Hello! My name is Julio. I am a nerd who likes math and code. I am always looking for any excuse to learn or
-            use those skills. I majored in mechanical engineering but fell in love with Data Science, so I pivoted my
-            career to that end.</p>
-        <p>I started working as a Data Analyst at a startup and then at a consulting company, where I was promoted to a
-            role centered on AI.</p>
-        <p>On this page I write blog posts about topics I find interesting and projects I am working on.</p>
-    </section>
-    <section id="contact">
-        <h2>☎️ Contact</h2>
-        <p>You can reach me via email at <a
-                href="mailto:juliodanielguerrero@gmail.com">juliodanielguerrero@gmail.com</a></p>
-        <p>You can also find me on <a href="https://x.com/jjddggrr1">X (@jjddggrr1)</a> and <a
-                href="https://www.linkedin.com/in/juliodanielguerrero/">LinkedIn</a>.</p>
-        <p>This is my current <a href="ExtraContent/2024-11_julio_guerrero.pdf">CV</a></p>
-    </section>
-    <section id="blog-posts">
-        <h2>📝 Blog Posts</h2>
-        <p>Here you can find the complete <a href="BlogPosts/blogMain.html">list of posts.</a> </p>
-        <h2>Featured Posts</h2>
-        <div class="blog-posts">
-            <article>
-                <h3>Building with AI #0 – Series of Short Posts</h3>
-                <p>The first post of my series "Building with AI".</p>
-                <a href="BlogPosts/post1.html">Read more...</a>
-            </article>
-            <!-- Add more blog posts as needed -->
+        <div class="header-inner">
+            <h1><a href="index.html">Julio Guerrero</a></h1>
+            <nav>
+                <a href="#about-me">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#blog-posts">Blog</a>
+                <a href="#contact">Contact</a>
+                <a href="ExtraContent/2026-10%20Julio%20Guerrero.pdf" target="_blank" rel="noopener">CV</a>
+            </nav>
         </div>
-    </section>
+    </header>
+
+    <main>
+        <section id="about-me">
+            <div class="hero-card">
+                <span class="hero-badge">⚡ Data Engineering • Cloud (AWS) • AI Solutions</span>
+                <h2 class="hero-title">Hi, I'm Julio Guerrero.</h2>
+                <p>I am a Data Analyst and Engineer with 4+ years of experience designing scalable data pipelines, serverless cloud architectures on AWS, and AI-driven systems. Originally trained in Mechanical Engineering, I fell in love with math, data, and software—pivoting my career into Data Engineering and Applied AI.</p>
+                <p>My work bridges business problem-solving and technical execution: architecting production <strong>RAG systems</strong> and LLM workflows, automating cloud <strong>ETL/ELT lakehouses</strong> with Python, PySpark, and Terraform, and migrating legacy workflows to modern cloud data warehouses.</p>
+                <div class="skill-pills">
+                    <span class="skill-pill">Python</span>
+                    <span class="skill-pill">SQL &amp; PostgreSQL</span>
+                    <span class="skill-pill">AWS (S3, Glue, Lambda, Athena)</span>
+                    <span class="skill-pill">Terraform (IaC)</span>
+                    <span class="skill-pill">Apache Spark / PySpark</span>
+                    <span class="skill-pill">RAG &amp; LLM Agents</span>
+                    <span class="skill-pill">Docker &amp; Airflow</span>
+                    <span class="skill-pill">Bash &amp; Git</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="section-header">
+                <h2>🚀 Featured Project</h2>
+                <a class="view-all-link" href="https://github.com/JDGR33" target="_blank" rel="noopener">GitHub Profile &rarr;</a>
+            </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-title-group">
+                        <span class="project-eyebrow">Serverless Data Engineering • Infrastructure as Code</span>
+                        <h3 class="project-title">
+                            <a href="https://github.com/JDGR33/aws-data-pipeline-terraform" target="_blank" rel="noopener">
+                                ⚡ Texas Energy &amp; Weather Serverless Data Lakehouse
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="project-links">
+                        <a class="project-btn" href="https://github.com/JDGR33/aws-data-pipeline-terraform" target="_blank" rel="noopener">
+                            View on GitHub &nearr;
+                        </a>
+                    </div>
+                </div>
+                <p class="project-description">
+                    An automated, 100% serverless end-to-end Medallion Data Lakehouse on AWS provisioned with modular <strong>Terraform</strong>. Ingests hourly ERCOT power grid telemetry (U.S. EIA v2 API) and Houston meteorological observations (Open-Meteo API) to analyze climate-driven grid demand, renewable generation, and battery storage arbitrage across 58,000+ records.
+                </p>
+                <ul class="project-highlights">
+                    <li><strong>Ingestion &amp; Cryptography (Bronze):</strong> Daily EventBridge schedules trigger a Python 3.12 AWS Lambda collector that writes immutable raw JSON payloads paired with SHA-256 cryptographic metadata manifests to S3.</li>
+                    <li><strong>PySpark ETL &amp; Quality Gate (Silver):</strong> AWS Glue 4.0 jobs enforce primary-key deduplication, route malformed records to quarantine prefixes, and write Snappy-compressed Parquet partitioned by year and month.</li>
+                    <li><strong>Zero-Crawler Sub-Second Analytics:</strong> Uses Amazon Athena Partition Projection over Glue Data Catalog to run Presto/Trino SQL queries in &lt;1 second (scanning 2–416 KB per query) with $0.00/hr idle compute cost.</li>
+                    <li><strong>Shift-Left CI/CD:</strong> Automated GitHub Actions pipeline running unit tests (<code>unittest</code>), <code>flake8</code> linting, Lambda artifact packaging, and <code>terraform validate</code> across dev (LocalStack) and prod environments.</li>
+                </ul>
+                <div class="project-tags">
+                    <span class="skill-pill">Terraform</span>
+                    <span class="skill-pill">AWS Lambda</span>
+                    <span class="skill-pill">AWS Glue (PySpark)</span>
+                    <span class="skill-pill">Amazon S3</span>
+                    <span class="skill-pill">Amazon Athena</span>
+                    <span class="skill-pill">EventBridge &amp; KMS</span>
+                    <span class="skill-pill">Python 3.12</span>
+                    <span class="skill-pill">GitHub Actions CI</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="section-header">
+                <h2>💼 Experience &amp; Credentials</h2>
+                <a class="view-all-link" href="ExtraContent/2026-10%20Julio%20Guerrero.pdf" target="_blank" rel="noopener">Full CV (PDF) &rarr;</a>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-top">
+                        <h3 class="timeline-role">Data Analyst for AI Solutions · <span class="timeline-company">MEG</span></h3>
+                        <span class="timeline-date">Jan 2024 – Present</span>
+                    </div>
+                    <ul class="timeline-list">
+                        <li>Architected end-to-end RAG pipelines in Python with OpenAI embeddings and vector stores across 100+ unstructured knowledge bases.</li>
+                        <li>Built scalable LLM document-processing workflows that reduced processing time and operational costs by 10x, and engineered a unit-tested private Python package to standardize team deployments.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-top">
+                        <h3 class="timeline-role">Software &amp; Data Solutions Consultant · <span class="timeline-company">Freelance</span></h3>
+                        <span class="timeline-date">Aug 2025 – Sep 2025</span>
+                    </div>
+                    <ul class="timeline-list">
+                        <li>Designed an AWS cloud data warehouse logical model and cloud migration roadmap for a major bank, replacing legacy Excel workflows with audit-ready C-suite metrics.</li>
+                        <li>Engineered a hybrid rule-based + LLM intent-parsing chatbot engine in Python backed by a comprehensive <code>unittest</code> regression suite.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-top">
+                        <h3 class="timeline-role">Data Analyst · <span class="timeline-company">MEG</span></h3>
+                        <span class="timeline-date">Apr 2022 – Jan 2024</span>
+                    </div>
+                    <ul class="timeline-list">
+                        <li>Developed an automated Python legal text-comparison audit tool across 100+ countries, deployed Tableau and R Shiny KPI apps, and automated REST API geospatial ETL pipelines.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-top">
+                        <h3 class="timeline-role">Jr. Operations Analyst · <span class="timeline-company">YUMMY</span></h3>
+                        <span class="timeline-date">Nov 2021 – Mar 2022</span>
+                    </div>
+                    <ul class="timeline-list">
+                        <li>Automated operational data extraction with Python and JavaScript (cutting manual work from 3 hours to seconds) and built Looker Studio fleet logistics dashboards.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="credentials-grid">
+                <div class="credential-card">
+                    <span class="credential-badge">AWS Certification</span>
+                    <h4 class="credential-title">AWS Certified Solutions Architect – Associate</h4>
+                    <p class="credential-meta">Amazon Web Services • Oct 2026</p>
+                </div>
+                <div class="credential-card">
+                    <span class="credential-badge">Professional Certificate</span>
+                    <h4 class="credential-title">Data Engineering Professional Certificate</h4>
+                    <p class="credential-meta">Coursera • Sep 2025</p>
+                </div>
+                <div class="credential-card">
+                    <span class="credential-badge">Education</span>
+                    <h4 class="credential-title">B.S. in Mechanical Engineering</h4>
+                    <p class="credential-meta">UNIMET • 2021</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog-posts">
+            <div class="section-header">
+                <h2>📝 Featured Posts</h2>
+                <a class="view-all-link" href="BlogPosts/blogMain.html">View all posts &rarr;</a>
+            </div>
+            <div class="blog-posts">
+                <article>
+                    <h3><a href="BlogPosts/post13.html">Bash, APIs, and Scripts in the AI World</a></h3>
+                    <p>Understanding the underlying command-line, API, and scripting tools that power modern AI agents.</p>
+                </article>
+                <article>
+                    <h3><a href="BlogPosts/post12.html">🖥️ Using Vim Motions</a></h3>
+                    <p>Why learning Vim motions saves time, reduces mouse strain, and pairs naturally with AI-assisted coding.</p>
+                </article>
+                <article>
+                    <h3><a href="BlogPosts/post1.html">Building with AI #0 – Series of Short Posts</a></h3>
+                    <p>The first post of my series "Building with AI", covering practical LLM concepts from APIs to Agents.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>☎️ Get in Touch</h2>
+            <p>Feel free to reach out via email, explore my code on GitHub, connect on social media, or download my latest CV:</p>
+            <div class="contact-grid">
+                <a class="contact-card" href="mailto:juliodanielguerrero@gmail.com">
+                    <span class="contact-icon">✉️</span>
+                    <div class="contact-info">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">juliodanielguerrero@gmail.com</span>
+                    </div>
+                </a>
+                <a class="contact-card" href="https://github.com/JDGR33" target="_blank" rel="noopener">
+                    <span class="contact-icon">💻</span>
+                    <div class="contact-info">
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">github.com/JDGR33</span>
+                    </div>
+                </a>
+                <a class="contact-card" href="https://www.linkedin.com/in/juliodanielguerrero/" target="_blank" rel="noopener">
+                    <span class="contact-icon">💼</span>
+                    <div class="contact-info">
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">in/juliodanielguerrero</span>
+                    </div>
+                </a>
+                <a class="contact-card" href="https://x.com/jjddggrr1" target="_blank" rel="noopener">
+                    <span class="contact-icon">🐦</span>
+                    <div class="contact-info">
+                        <span class="contact-label">X (Twitter)</span>
+                        <span class="contact-value">@jjddggrr1</span>
+                    </div>
+                </a>
+                <a class="contact-card" href="ExtraContent/2026-10%20Julio%20Guerrero.pdf" target="_blank" rel="noopener">
+                    <span class="contact-icon">📄</span>
+                    <div class="contact-info">
+                        <span class="contact-label">Resume / CV (Oct 2026)</span>
+                        <span class="contact-value">Download PDF</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2024 Julio Guerrero. All rights reserved.</p>
+        <p>&copy; 2026 Julio Guerrero. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
 </body>
